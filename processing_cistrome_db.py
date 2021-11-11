@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-histone_data = pd.read_csv('histones.txt', delimiter = '\t')
+histone_data = pd.read_csv('cistrome_histones.txt', delimiter = '\t')
 
 
 '''
@@ -37,12 +37,12 @@ h3k27ac = histone_data.loc[histone_data['Factor'] == 'H3K27ac'] # 11,000 entries
 11016  88808  Homo sapiens  GSM2523126  H3K27ac         C6661                 None        None    39.0               0.9033  0.883                    42.0  0.068909            0.954000
 '''
 
+print(h3k27ac['GSMID'])
 
 
+# by_frequency = h3k27ac['Cell_line'].value_counts()
 
-by_frequency = h3k27ac['Cell_line'].value_counts()
-
-print(by_frequency.to_string())
+# print(by_frequency.to_string())
 
 
 '''
@@ -111,8 +111,76 @@ THP-1                  5
 
 
 
-by_frequency.to_csv('cistrome_db_h3k27ac_histone_by_cell_line_frequency_counts.csv') # , index=False, header=True)
+# by_frequency.to_csv('cistrome_db_h3k27ac_histone_by_cell_line_frequency_counts.csv') # , index=False, header=True)
+
+
+
+'''
+Cell Line    RNA-Seq    H3K27ac count in Cistrome DB
+GM12878    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE86658    34
+H1ES    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90225    19
+HepG2    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE86659    8
+K562    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE86660    57
+NHEK    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE78594    10
+NHLF    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE78595    3
+Hela    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE86661    1
+MCF-7    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90237    68
+NPC  (H1) ?    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM706049    ?
+A549    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90259    53
+Hela-S3    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE86661    1
+HepG2    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE86659    8
+IMR90    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90263    19
+LHCN-M2    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM958750    2
+SK-N-SH    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90232    3
+AG04450    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE78585    1
+BE2-C    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2453356    5
+BJ    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90251    4
+GM12891    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM958747    3
+GM12892    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM958748    3
+HCT-116    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM958749    53
+Jurkat    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE93435    9
+NHEK    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM958736    10
+NHLF    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE78595    3
+PANC-1    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE93450    6
+SK-N-SH    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90232    3
+U87    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90176    1
+'''
+
+
+available_RNA_Seq_by_cell_line = ['GM12878',
+                                  'H1ES',
+                                  'HepG2',
+                                  'K562',
+                                  'NHEK',
+                                  'NHLF',
+                                  'Hela',
+                                  'MCF-7',
+                                  'NPC',
+                                  'A549',
+                                  'Hela-S3',
+                                  'HepG2',
+                                  'IMR90',
+                                  'LHCN-M2',
+                                  'SK-N-SH',
+                                  'AG04450',
+                                  'BE2-C',
+                                  'BJ',
+                                  'GM12891',
+                                  'GM12892',
+                                  'HCT-116',
+                                  'Jurkat',
+                                  'NHEK',
+                                  'NHLF',
+                                  'PANC-1',
+                                  'SK-N-SH',
+                                  'U87']
 
 
 
 
+filtered_cistrome = h3k27ac[h3k27ac.Cell_line.isin(available_RNA_Seq_by_cell_line)]
+
+
+
+# only run once
+# filtered_cistrome.to_csv('filtered_cistrome.csv', sep='\t')
