@@ -1,4 +1,4 @@
-	DCid	Species	GSMID	Factor	Cell_line	Cell_type	Tissue_type	FastQC	UniquelyMappedRatio	PBC	PeaksFoldChangeAbove10	FRiP	PeaksUnionDHSRatio	Organization
+Index	DCid	Species	GSMID	Factor	Cell_line	Cell_type	Tissue_type	FastQC	UniquelyMappedRatio	PBC	PeaksFoldChangeAbove10	FRiP	PeaksUnionDHSRatio	Organization
 244	1820	Homo sapiens	GSM521887	H3K27ac	IMR90	Fibroblast	Lung	31.0	0.6975	0.973	13388.0	0.48629	0.9766	University of California, San Diego
 245	1821	Homo sapiens	GSM469967	H3K27ac	IMR90	Fibroblast	Lung	29.0	0.7388	0.97	21330.0	0.583339	0.9678	University of California, San Diego
 246	1822	Homo sapiens	GSM469966	H3K27ac	IMR90	Fibroblast	Lung	28.0	0.6556	0.988	8116.0	0.34937375	0.9738	University of California, San Diego
