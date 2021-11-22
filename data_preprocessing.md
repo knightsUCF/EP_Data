@@ -62,16 +62,7 @@ Further, a recently published paper proposed an additional improvement over FPKM
 
 https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-021-02936-w
 
-
-* obtain the ChIP-seq peaks and RNA-seq gene expression for each of the 21 samples based on the methods we learned some time ago
-
-* we do not consider the 13th row, as the sample is not from the same condition
-
-* For ChIP-seq, we hope to have both peaks defined by MACS2 and the bigwig files.
-
-* For both data, you need to see how people first clean reads, filter low-quality one and then map before you apply macs2 or the R tool to define gene expression. 
-
-* Please refer to prestidge and let me know your plan of do it first.
+I am not certain whether the above method is just a slight improvement and not worth the effort. 
 
 
 
