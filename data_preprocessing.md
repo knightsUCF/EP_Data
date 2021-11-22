@@ -32,8 +32,14 @@ TopHat modified for colorspace reads. Given the different platforms used in sequ
 samples, FPKMs were quantile normalized. Shannon entropy scoring was then performed on the
 normalized FPKMs to score cell line specificity of gene expression. 
 
-# ChIP-seq Processing Plan Steps
 
+# Detailed Preprocessing Plan 
+
+---
+
+<br>
+
+# ChIP-seq Processing Plan Steps
 
 * trim matched inputs for each sample to 10 million reads prior to alignment
 
@@ -55,6 +61,15 @@ normalized FPKMs to score cell line specificity of gene expression.
 
 * use Shannon entropy scoring on normalized maximum signals to quanity the cell type-secificity for each region
 
-# RNA-seq Data Processing
+# RNA-seq Processing Plan Steps
 
-* 
+* align reads to reference genome (hg18 with TopHat for Prestige), allowing for a maximum of 10 multiple alignments
+
+* determine the FPKM gene expression score using Cufflinks, with an FPKM threshold of 0.3 to balance the false discovery and false negative rates
+
+* round gene expression to zero with FPKM below 0.3
+
+* table the results
+
+* Genes with FPKMs
+below 0.3 were rounded to zero and then the results were tabled.
