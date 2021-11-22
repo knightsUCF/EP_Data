@@ -1,10 +1,16 @@
+# Overview
+
+I. ChIP-seq Prestige Processing Plan Steps
+
+II. RNA-seq Prestige Processing Plan Steps
+
+III. Notes on Filtering
 
 
 
 
 
-
-# ChIP-seq Processing Plan Steps
+# I. ChIP-seq Prestige Processing Plan Steps
 
 * trim matched inputs for each sample to 10 million reads prior to alignment
 
@@ -26,7 +32,7 @@
 
 * use Shannon entropy scoring on normalized maximum signals to quanity the cell type-secificity for each region
 
-# RNA-seq Processing Plan Steps
+# II. RNA-seq Prestige Processing Plan Steps
 
 * align reads to reference genome (hg18 with TopHat for Prestige), allowing for a maximum of 10 multiple alignments
 
@@ -44,7 +50,7 @@ TopHat modified for colorspace reads." (Note: need to research more about NPCs -
 * use Shannon entropy scoring on the normalized FPKMs to score cell line specificity of gene expression
 
 
-# Notes on Filtering
+# III. Notes on Filtering
 
 We want to clean the reads, and filter the low-quality ones, and then map them (align to the reference human genome) before we use MACS2 to extract the peaks. 
 
