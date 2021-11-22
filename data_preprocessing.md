@@ -47,9 +47,14 @@ normalized FPKMs to score cell line specificity of gene expression.
 
 * compile and collapse the overlapping ChIP-seq peaks across the different cell lines
 
-* Retrieve the maximum signal in each region across all cell lines and table the results
+* retrieve the maximum signal in each region across all cell lines and table the results
+
+* normalize for read depth, and varying enrichmenta cross ChIP samples
+
+* quantile normalization applied to maximum signals
+
+* use Shannon entropy scoring on normalized maximum signals to quanity the cell type-secificity for each region
+
+# RNA-seq Data Processing
 
 * 
-
-
-
