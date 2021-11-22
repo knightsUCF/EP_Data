@@ -58,7 +58,7 @@ There are different ways to filter low-quality reads, such as by FPKM, which is 
 
 Further, a recently published paper proposed an additional improvement over FPKM:
 
-<i>"Our results revealed that hierarchical clustering on normalized count data tended to group replicate samples from the same PDX model together more accurately than TPM and FPKM data. Furthermore, normalized count data were observed to have the lowest median coefficient of variation (CV), and highest intraclass correlation (ICC) values across all replicate samples from the same model and for the same gene across all PDX models compared to TPM and FPKM data."</i>
+<i>"Our results revealed that hierarchical clustering on normalized count data tended to group replicate samples from the same PDX model together more accurately than TPM and FPKM data. Furthermore, normalized count data were observed to have the lowest median coefficient of variation (CV), and highest intraclass correlation (ICC) values across all replicate samples from the same model and for the same gene across all PDX models compared to TPM and FPKM data... Our findings are consistent with what others have shown for human tumors and cell lines and add further support to the thesis that normalized counts are the best choice for the analysis of RNA-seq data across samples."</i>
 
 https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-021-02936-w
 
