@@ -26,8 +26,6 @@ Also, we can keep the pipeline in Python with FASTQP as a way to replace and or 
 
 # II. Filtering
 
-We want to clean the reads, and filter the low-quality ones, and then map them (align to the reference human genome) before we use MACS2 to extract the peaks. 
-
 There are different ways to filter low-quality reads, such as by FPKM, which is what Prestige uses. In our methods covered previously we also used TPM, and RPKM.
 
 Further, a recently published paper proposed an additional improvement over FPKM:
