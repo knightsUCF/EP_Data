@@ -50,7 +50,7 @@ TopHat modified for colorspace reads." (Note: need to research more about NPCs -
 * use Shannon entropy scoring on the normalized FPKMs to score cell line specificity of gene expression
 
 
-# III. Notes on Filtering
+# III. Filtering
 
 We want to clean the reads, and filter the low-quality ones, and then map them (align to the reference human genome) before we use MACS2 to extract the peaks. 
 
@@ -62,7 +62,15 @@ Further, a recently published paper proposed an additional improvement over FPKM
 
 https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-021-02936-w
 
-I am not certain whether the above method is just a slight improvement and not worth the effort. 
+I am not certain whether the above method is just a slight improvement and not worth the effort.
+
+# IV. Quality Control
+
+FASTQC is a standard method for assessing the quality of reads:
+
+https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+
+
 
 
 
