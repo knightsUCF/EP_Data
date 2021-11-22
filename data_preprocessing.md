@@ -79,5 +79,10 @@ normalized FPKMs to score cell line specificity of gene expression.
 
 * table the results
 
-* Genes with FPKMs
-below 0.3 were rounded to zero and then the results were tabled.
+* "The data obtained for Neural Precursor Cells (NPCs) was sequenced on the ABI SOLiD platform, and was aligned using
+TopHat modified for colorspace reads." (Note: need to research more about NPCs -- this is the question mark in the sheet document)
+
+* use quantile normalization for the FPKMs across the different cell lines
+
+* use Shannon entropy scoring on the normalized FPKMs to score cell line specificity of gene expression
+
