@@ -54,7 +54,7 @@ TopHat modified for colorspace reads." (Note: need to research more about NPCs -
 
 We want to clean the reads, and filter the low-quality ones, and then map them (align to the reference human genome) before we use MACS2 to extract the peaks. 
 
-There are different ways to filter low-quality ones, such as by FPKM, which is what Prestige uses. In our methods covered previously we also used TPM, and RPKM.
+There are different ways to filter low-quality reads, such as by FPKM, which is what Prestige uses. In our methods covered previously we also used TPM, and RPKM.
 
 Further, a recently published paper proposed an additional improvement over FPKM:
 
