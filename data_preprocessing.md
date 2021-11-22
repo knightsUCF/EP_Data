@@ -1,3 +1,30 @@
+
+# Notes on Filtering
+
+We want to clean the reads, and filter the low-quality ones, and then map them (align to the reference human genome) before we use MACS2 to extract the peaks. 
+
+There are different ways to filter low-quality ones, such as by FPKM, which is what Prestige uses. In our methods covered previously we also used TPM, and RPKM.
+
+Further, a recently published paper proposed an additional improvement over FPKM:
+
+<i>"Our results revealed that hierarchical clustering on normalized count data tended to group replicate samples from the same PDX model together more accurately than TPM and FPKM data. Furthermore, normalized count data were observed to have the lowest median coefficient of variation (CV), and highest intraclass correlation (ICC) values across all replicate samples from the same model and for the same gene across all PDX models compared to TPM and FPKM data."</i>
+
+https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-021-02936-w
+
+
+* obtain the ChIP-seq peaks and RNA-seq gene expression for each of the 21 samples based on the methods we learned some time ago
+
+* we do not consider the 13th row, as the sample is not from the same condition
+
+* For ChIP-seq, we hope to have both peaks defined by MACS2 and the bigwig files.
+
+* For both data, you need to see how people first clean reads, filter low-quality one and then map before you apply macs2 or the R tool to define gene expression. 
+
+* Please refer to prestidge and let me know your plan of do it first.
+
+
+
+
 # ChIP-seq Processing Plan Steps
 
 * trim matched inputs for each sample to 10 million reads prior to alignment
