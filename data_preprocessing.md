@@ -21,6 +21,8 @@ Another quality control tool is Prinseq:
 
 http://prinseq.sourceforge.net/manual.html
 
+Also, we can keep the pipeline in Python with FASTQP as a way to replace and or compare with FASTQC: https://github.com/mdshw5/fastqp
+
 
 # II. Filtering
 
