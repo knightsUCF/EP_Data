@@ -70,6 +70,10 @@ FASTQC is a standard method for assessing the quality of reads:
 
 https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
+Another quality control tool is Prinseq:
+
+http://prinseq.sourceforge.net/manual.html
+
 
 
 
