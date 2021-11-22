@@ -31,3 +31,25 @@ Precursor Cells (NPCs) was sequenced on the ABI SOLiD platform, and was aligned 
 TopHat modified for colorspace reads. Given the different platforms used in sequencing the 12
 samples, FPKMs were quantile normalized. Shannon entropy scoring was then performed on the
 normalized FPKMs to score cell line specificity of gene expression. 
+
+# ChIP-seq Processing Plan Steps
+
+
+* trim matched inputs for each sample to 10 million reads prior to alignment
+
+* align to the reference genome with BWA
+
+* remove duplicate reads with SAMTools
+
+* use MACS2 for peak calling
+
+* peaks are used to identify enhancer sites
+
+* compile and collapse the overlapping ChIP-seq peaks across the different cell lines
+
+* Retrieve the maximum signal in each region across all cell lines and table the results
+
+* 
+
+
+
