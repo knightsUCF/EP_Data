@@ -1,4 +1,4 @@
-# Overview
+# Overview of RNA-seq and ChIP-seq Data Preprocessing
 
 I. Quality Control
 
